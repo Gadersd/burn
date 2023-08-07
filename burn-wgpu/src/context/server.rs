@@ -62,7 +62,7 @@ impl SyncContextServer {
         self.tasks.push(task);
 
         // Submit the tasks to the GPU when more than 50 tasks are accumulated.
-        const MAX_TASKS: usize = 20;
+        const MAX_TASKS: usize = 50;
 
         if self.tasks.len() > MAX_TASKS {
             self.register_tasks();
